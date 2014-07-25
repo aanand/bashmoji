@@ -6,7 +6,13 @@
 
 
 time=`date +%H%M`; #24hr time str
-if [ "$time" -lt 0700 ]
+if [ "$time" -lt 0300 ]
+then
+    echo -n '🌚'
+elif [ "$time" -lt 0600 ]
+then
+    echo -n '💪'
+elif [ "$time" -lt 0700 ]
 then
     echo -n '🌄'
 elif [ "$time" -lt 0900 ]
@@ -27,12 +33,6 @@ then
 elif [ "$time" -lt 2300 ]
 then
     echo -n '🌠'
-elif [ "$time" -lt 0300 ]
-then
-    echo -n '🌝'
-elif [ "$time" -lt 0600 ]
-then
-    echo -n '🌜'
 else
-    echo -n '💪'
+    echo -n '🌜'
 fi
